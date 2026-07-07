@@ -1,6 +1,4 @@
-package DSA.String;
-
-public class LongestCommomPrefix {
+public class lc14_longestCommonPrefix {
     String longestCommonPrefix(String[] str) {
         int minLen = str[0].length();
         for (String s : str) {
@@ -23,9 +21,8 @@ public class LongestCommomPrefix {
 
     public static void main(String[] args) {
         String[] s = { "flower", "flow", "flight" };
-        LongestCommomPrefix lc14 = new LongestCommomPrefix();
+        lc14_longestCommonPrefix lc14 = new lc14_longestCommonPrefix();
         String res = lc14.longestCommonPrefix(s);
         System.out.println(res);
     }
-
 }

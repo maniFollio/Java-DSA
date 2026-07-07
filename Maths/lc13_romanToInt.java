@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class lc_13_romanToInt {
+public class lc13_romanToInt {
     int romanToInt(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         map.put('I', 1);
@@ -35,7 +35,7 @@ public class lc_13_romanToInt {
         // String s = "III";
         // String s = "MCMXCIV";
         String s = "MCMIV";
-        lc_13_romanToInt lc13 = new lc_13_romanToInt();
+        lc13_romanToInt lc13 = new lc13_romanToInt();
         lc13.romanToInt(s);
     }
 }
