@@ -1,26 +1,28 @@
 public class lc443_compressString {
-    void compressString(char[] ch) {
-
-        // String s = "";
-        StringBuilder s = new StringBuilder();
-        int n = ch.length;
-        int count = 1;
-        for (int i = 1; i < n; i++) {
-
-            if (ch[i] == ch[i - 1]) {
+    void compressString(char[] chars) {
+        int idx = 0;
+        int n = chars.length;
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+            char ch = chars[i];
+            while (i < n && chars[i] == ch) {
+                i++;
                 count++;
-            } else{
-                count = 1;
             }
-            
-            // if (count == 1) {
-            //     s.append(ch[i]);
-            // } else {
-            //     s.append(ch[i]);
-            //     s.append(count);
-            // }
+            if (count == 1) {
+                chars[idx++] = ch;
+            } else {
+                chars[idx++] = ch;
+                String s = Integer.toString(count);
+                for (char c : s.toCharArray()) {
+                    chars[idx++] = c;
+                }
+            }
+            i--;
         }
-        System.out.println(s);
+        for (int i = 0; i < idx; i++) {
+            System.out.print(chars[i]);
+        }
     }
 
     public static void main(String[] args) {
