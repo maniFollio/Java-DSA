@@ -10,7 +10,7 @@ public class lc141_linkedListCycleDetection {
         }
     }
 
-    public boolean hasCycle(ListNode head) {
+    boolean hasCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
         while (fast != null && fast.next != null) {
