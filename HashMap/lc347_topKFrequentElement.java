@@ -5,43 +5,39 @@ import java.util.List;
 import java.util.Map;
 
 public class lc347_topKFrequentElement {
-    void frequentElement(int[] nums, int k) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        List<Integer> list = new ArrayList<>();
-        for (int key : nums) {
-            if (map.containsKey(key)) {
-                map.put(key, map.get(key) + 1);
-            } else {
-                map.put(key, 1);
+    public int[] topKFrequent(int[] nums, int k) {
+        List<Integer>[] bucket = new List[nums.length + 1];
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int n : nums) {
+            frequencyMap.put(n, frequencyMap.getOrDefault(n, 0) + 1);
+        }
+        for (int key : frequencyMap.keySet()) {
+            int frequency = frequencyMap.get(key);
+            if (bucket[frequency] == null) {
+                bucket[frequency] = new ArrayList<>();
+            }
+            bucket[frequency].add(key);
+        }
+        int[] result = new int[k];
+        int count = 0;
+        for (int i = bucket.length - 1; i >= 0 && count < k; i--) {
+            if (bucket[i] != null) {
+                for (int num : bucket[i]) {
+                    result[count] = num;
+                    count++;
+                    if (count == k) {
+                        break;
+                    }
+                }
             }
         }
-        int idx = 0;
-        int arr[] = new int[map.size()];
-        for (int count : map.keySet()) {
-            if (map.get(count) >= k) {
-                arr[idx++] = map.get(count);
-            }
-        }
-        Arrays.sort(arr);
-        int n = arr.length;
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if(entry.getValue() == arr[n-1]){
-                list.add(entry.getKey());
-            }
-            n--;
-        }
-        int newArr[] = new int[k];
-        for(int i =0; i < k; i++){
-            newArr[i]=list.get(i);
-        }
-        for (int i = 0; i < k; i++) {
-            System.out.print(newArr[i] + "   ");
-        }
+        return result;
     }
     public static void main(String[] args) {
         // int[] arr = { 1, 1, 1, 2, 2, 3 };
         int[] arr = { 1, 2, 1, 2, 1, 2, 3, 1, 3, 2 };
         lc347_topKFrequentElement lc347 = new lc347_topKFrequentElement();
-        lc347.frequentElement(arr, 2);
+        int[] ans = lc347.topKFrequent(arr, 2);
+        System.out.println(Arrays.toString(ans));
     }
 }
