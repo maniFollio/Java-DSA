@@ -27,11 +27,10 @@ public class lc451_sortCharactersByFrequency {
                 for (char chr : bucket[i]) {
                     for (int j = 0; j < i; j++) {
                         cArr[idx++] = chr;
-                    }
+                    } 
                 }
             }
         }
-        // System.out.println(sb);
         return new String(cArr);
     }
 
