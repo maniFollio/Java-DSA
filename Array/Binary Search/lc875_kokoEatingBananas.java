@@ -14,7 +14,6 @@ public class lc875_kokoEatingBananas {
                 minSpeed = mid + 1;
             }
         }
-        // System.out.println(minSpeed);
         return minSpeed;
     }
 
