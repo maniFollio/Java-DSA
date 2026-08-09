@@ -1,16 +1,24 @@
 public class lc33_searchinRotatedSortedArray {
-    int searchinArray(int[] nums, int target) {
-        int left = 0;
-        int right = nums.length - 1;
-        while (left < right) {
-            int mid = (right + left) / 2;
-            if (nums[left] == target) {
-                return left;
+    int searchinArray(int[] nums, int tar) {
+        int l = 0;
+        int r = nums.length - 1;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            if (nums[mid] == tar) {
+                return mid;
             }
-            if (target < nums[right]) {
-                left = mid + 1;
-            } else {
-                right = mid;
+            if (nums[l] <= nums[mid]) { // For Left Sorted
+                if (nums[l] <= tar && tar <= nums[mid]) {
+                    r = mid - 1;
+                } else {
+                    l = mid + 1;
+                }
+            } else { // For Right Sorted
+                if (nums[mid] <= tar && tar <= nums[r]) {
+                    l = mid + 1;
+                } else {
+                    r = mid - 1;
+                }
             }
         }
         return -1;
