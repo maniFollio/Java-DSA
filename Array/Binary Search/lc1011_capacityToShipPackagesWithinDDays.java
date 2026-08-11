@@ -14,7 +14,6 @@ public class lc1011_capacityToShipPackagesWithinDDays {
                 left = mid + 1;
             }
         }
-        // System.out.println(left);
         return left;
     }
 
