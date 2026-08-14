@@ -1,11 +1,16 @@
 public class lc541_reverseStringII {
     String revrseString(String s, int k) {
         char[] ch = s.toCharArray();
-        for (int i = 0; i < ch.length-1; i += (2 * k)) {
-            char temp = ch[i];
-            ch[i] = ch[i+1];
-            ch[i+1] = temp;
-            // return ch;
+        for (int i = 0; i < ch.length; i += (2 * k)) {
+            int left = i;
+            int right = Math.min(i + k - 1, ch.length - 1);
+            while (left < right) {
+                char temp = ch[left];
+                ch[left] = ch[right];
+                ch[right] = temp;
+                left++;
+                right--;
+            }
         }
         return new String(ch);
     }
