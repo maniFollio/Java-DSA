@@ -24,7 +24,6 @@ public class lc448_findAllNumbersDisappearedinanArray {
             }
             count++;
         }
-        System.out.println(list);
         return list;
     }
 
@@ -32,6 +31,6 @@ public class lc448_findAllNumbersDisappearedinanArray {
         // int[] arr = { 4, 3, 2, 7, 8, 2, 3, 1 };
         int[] arr = { 1, 1 };
         lc448_findAllNumbersDisappearedinanArray lc448 = new lc448_findAllNumbersDisappearedinanArray();
-        lc448.findDisappearedNumbers(arr);
+        System.out.println(lc448.findDisappearedNumbers(arr));
     }
 }
