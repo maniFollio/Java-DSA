@@ -1,4 +1,4 @@
-public class lc508_perfectNumber {
+public class lc507_perfectNumber {
     public void checkPerfectNumber(int num) {
         int total = 0;
         int n = 0;
@@ -12,7 +12,7 @@ public class lc508_perfectNumber {
     }
     public static void main(String[] args) {
         int n = 28;
-        lc508_perfectNumber lc508 = new lc508_perfectNumber();
+        lc507_perfectNumber lc508 = new lc507_perfectNumber();
         lc508.checkPerfectNumber(n);
     }
 
