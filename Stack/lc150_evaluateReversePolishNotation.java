@@ -9,7 +9,10 @@ public class lc150_evaluateReversePolishNotation {
         int x, y;
         String choice;
         for (int i = 0; i < tokens.length; i++) {
-            if (tokens[i] != "+" && tokens[i] != "-" && tokens[i] != "*" && tokens[i] != "/") {
+            if (!tokens[i].equals("+") &&
+                    !tokens[i].equals("-") &&
+                    !tokens[i].equals("*") &&
+                    !tokens[i].equals("/")) {
                 stack.push(tokens[i]);
                 continue;
             } else {
