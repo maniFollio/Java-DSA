@@ -21,20 +21,23 @@ public class lc3718_smallestMissingMultipleofK {
         Arrays.sort(arr);
         int cpy = k;
         for (int i = 0; i < count - 1; i++) {
-            if (arr[i] > cpy) {
-                System.out.println(cpy);
+            if (arr[i] < cpy) {
+                continue;
+            }
+            if (arr[i] == cpy) {
+                cpy += k;
+            } else {
                 return cpy;
             }
-            cpy += k;
         }
-        int res = arr[arr.length - 1] + k;
-        // System.out.println(res);
-        return res;
+        return cpy;
     }
 
     public static void main(String[] args) {
-        int[] nums = { 8, 2, 3, 4, 6 };
-        int k = 2;
+        // int[] nums = { 8, 2, 3, 4, 6 };
+        // int k = 2;
+        int[] nums = { 3, 29, 3, 51 };
+        int k = 3;
         // int[] nums = { 1, 4, 7, 10, 15 };
         // int k = 5;
         lc3718_smallestMissingMultipleofK lc3718 = new lc3718_smallestMissingMultipleofK();
