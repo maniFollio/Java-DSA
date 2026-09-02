@@ -17,12 +17,3 @@ public class lc1903_largestOddNumberinString {
         System.out.println(res);
     }
 }
-
-// int num = Integer.parseInt(s);
-// while (num != 0) {
-// if ((num % 2) != 0) {
-// return "" + num;
-// }
-// num = num / 10;
-// }
-// return "";
