@@ -13,7 +13,7 @@ public class lc950_revealCardsInIncreasingOrder {
         for (int i = 0; i < deck.length; i++) {
             int del = q.poll();
             ans[del] = deck[i];
-            if(!q.isEmpty()){
+            if (!q.isEmpty()) {
                 q.offer(q.poll());
             }
         }
@@ -21,10 +21,10 @@ public class lc950_revealCardsInIncreasingOrder {
     }
 
     public static void main(String[] args) {
-            int[] deck = {17,13,11,2,3,5,7};
-            lc950_revealCardsInIncreasingOrder lc950 = new lc950_revealCardsInIncreasingOrder();
-            int[] res = lc950.deckRevealedIncreasing(deck);
-            System.out.println(Arrays.toString(res));
-        }
+        int[] deck = { 17, 13, 11, 2, 3, 5, 7 };
+        lc950_revealCardsInIncreasingOrder lc950 = new lc950_revealCardsInIncreasingOrder();
+        int[] res = lc950.deckRevealedIncreasing(deck);
+        System.out.println(Arrays.toString(res));
+    }
 
 }
