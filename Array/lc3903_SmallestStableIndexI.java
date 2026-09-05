@@ -3,7 +3,7 @@ public class lc3903_SmallestStableIndexI {
         int[] minArr = new int[nums.length];
         int max = Integer.MIN_VALUE;
         int n = nums.length;
-        minArr[n-1] = nums[n-1];
+        minArr[n - 1] = nums[n - 1];
         for (int i = n - 2; i >= 0; i--) {
             minArr[i] = Math.min(minArr[i + 1], nums[i]);
         }
@@ -22,6 +22,5 @@ public class lc3903_SmallestStableIndexI {
         lc3903_SmallestStableIndexI lc3903 = new lc3903_SmallestStableIndexI();
         int res = lc3903.firstStableIndex(arr, k);
         System.out.println(res);
-        // lc3903.firstStableIndex(arr, k);
     }
 }
