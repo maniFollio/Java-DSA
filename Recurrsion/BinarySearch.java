@@ -1,4 +1,8 @@
 public class BinarySearch {
+    int search(int[] arr, int target) {
+        return binarySearch(arr, 0, arr.length - 1, target);
+    }
+
     int binarySearch(int nums[], int left, int right, int key) {
         if (left <= right) {
             int mid = left + (right - left) / 2;
@@ -16,10 +20,9 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int arr[] = { 2, 3, 4, 10, 40 };
-        int r = arr.length;
         int target = 10;
         BinarySearch bs = new BinarySearch();
-        int res = bs.binarySearch(arr, 0, r - 1, target);
+        int res = bs.search(arr, target);
         System.out.println(res);
     }
 }
