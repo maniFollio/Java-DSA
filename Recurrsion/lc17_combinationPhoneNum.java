@@ -24,4 +24,11 @@ public class lc17_combinationPhoneNum {
             solve(digits, ans, map, index + 1, current + temp.charAt(i));
         }
     }
+
+    public static void main(String[] args) {
+        String digits = "23";
+        lc17_combinationPhoneNum lc17 = new lc17_combinationPhoneNum();
+        List<String> ans = lc17.letterCombinations(digits);
+        System.out.println(ans);
+    }
 }
