@@ -20,3 +20,4 @@ public class lc67_addBinary {
         return result.reverse().toString();
     }
 }
+
