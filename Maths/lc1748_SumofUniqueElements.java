@@ -7,12 +7,17 @@ public class lc1748_SumofUniqueElements {
             map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
         }
         int sum = 0;
-        for (int key : map.keySet()) {
-            // int val = map.get(key);
-            if (map.get(key) == 1) {
-                sum += key;
+        for (int num : nums) {
+            if (map.get(num) == 1) {
+                sum += num;
             }
         }
+        // for (int key : map.keySet()) {
+        // // int val = map.get(key);
+        // if (map.get(key) == 1) {
+        // sum += key;
+        // }
+        // }
         return sum;
     }
 
