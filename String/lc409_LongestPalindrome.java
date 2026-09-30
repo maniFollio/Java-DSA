@@ -1,6 +1,8 @@
 import java.util.HashSet;
 
 public class lc409_LongestPalindrome {
+    // Approach 1
+
     public int longestPalindrome(String s) {
         int len = 0;
         int[] charCount = new int[128];
@@ -16,6 +18,7 @@ public class lc409_LongestPalindrome {
         return len;
     }
 
+    // Approach 2
     public int longestPalindrome_2(String s) {
         HashSet<Character> set = new HashSet<>();
         int len = 0;
