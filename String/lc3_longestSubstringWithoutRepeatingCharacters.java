@@ -19,8 +19,7 @@ public class lc3_longestSubstringWithoutRepeatingCharacters {
     }
 
     public static void main(String[] args) {
-        // String s = "abcabcbb";
-        String s = "pwwkew";
+        String s = "abcabcbb";
         lc3_longestSubstringWithoutRepeatingCharacters lc3 = new lc3_longestSubstringWithoutRepeatingCharacters();
         lc3.lengthOfLongestSubstring(s);
     }
