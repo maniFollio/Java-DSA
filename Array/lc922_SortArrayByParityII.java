@@ -19,4 +19,3 @@ public class lc922_SortArrayByParityII {
         return res;
     }
 }
-//922. Sort Array By Parity II
