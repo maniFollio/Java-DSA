@@ -5,4 +5,6 @@ Date            Topic
 20/11/26    Revised Levelorder Tree  
 21/11/26    Revised Average of Levels
 22/11/26    Sunday Is Funday.
-23/11/26    Revised PathSum.    
+23/11/26    Revised PathSum.
+24/11/26    Revised Zigzag Traversal.    
+
